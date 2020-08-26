@@ -38,8 +38,16 @@ app.use((req, res, next) => {
 /*
  * Route with documentation to build your project with prismic
  */
+
 app.get('/', (req, res) => {
-  res.redirect('/help');
+  req.prismic.api.query('').then((document) => {
+    // response is the response object, response.results holds the documents
+    if (document) {
+      res.render('front', { document });
+    } else {
+      res.status(404).render('404');
+    }
+  });
 });
 
 /*
