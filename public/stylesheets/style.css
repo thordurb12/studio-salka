@@ -13,3 +13,7 @@ body {
     letter-spacing: 0.45;
     color: #516677;
 }
+
+img {
+    max-width: 100%;
+}
