@@ -16,7 +16,6 @@ module.exports = {
     if (doc.type === 'page') {
       return `/page/${doc.uid}`;
     }
-
     return '/';
   },
 };

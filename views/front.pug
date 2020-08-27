@@ -1,18 +1,18 @@
-doctype html(lang='en')
+extends ./layout.pug
 
-head
-    title Prismic help page
-    link(rel="stylesheet", href="/stylesheets/reset.css")
-    link(rel="stylesheet", href="/stylesheets/style.css")
-    link(rel="stylesheet", href="/stylesheets/vendors/help.min.css")
-    link(href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900", rel="stylesheet", type="text/css")
-    link(href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600", rel="stylesheet", type="text/css")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    script(src="https://code.jquery.com/jquery-1.12.4.min.js")
-    script(src="/javascript/vendors/highlight.min.js")
+block body
+    .grid
+        each work in document.results
+            .work.inner
+                a(href="../page/" + work.uid)
+                    img(src=work.data.image.url)
 
-body
-  div
-    each work in document.results
-        a(href="../page/" + work.uid)
-            img(src=work.data.image.url)
+    script. 
+        FlexMasonry.init('.grid',{
+        responsive: true,
+            breakpointCols: {
+                'min-width: 992px': 3,
+                'min-width: 768px': 2,
+                'min-width: 576px': 1
+            },
+        });
