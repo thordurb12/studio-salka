@@ -13,7 +13,7 @@ body {
     letter-spacing: 0.45;
     color: black;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .nav {
