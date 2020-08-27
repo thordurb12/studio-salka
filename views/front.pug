@@ -6,6 +6,7 @@ block body
             .work.inner
                 a(href="../page/" + work.uid)
                     img(src=work.data.image.url)
+                    != PrismicDOM.RichText.asHtml(work.data.title, ctx.linkResolver)
 
     script. 
         FlexMasonry.init('.grid',{

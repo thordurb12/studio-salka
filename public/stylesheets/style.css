@@ -21,10 +21,6 @@ body {
     padding: 40px 10px;
 }
 
-.main-content {
-    /*  */
-}
-
 .nav .links {
     display: inline;
     color: black !important;
@@ -51,4 +47,21 @@ h1 {
 
 img {
     max-width: 100%;
+}
+
+.work {
+    position: relative;
+}
+
+.work h1 {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    color: black !important;
+    padding-left: 5px;
+}
+
+.work:hover h1 {
+    display: block;
 }
