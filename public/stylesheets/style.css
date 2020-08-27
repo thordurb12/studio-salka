@@ -24,10 +24,19 @@ body {
 .nav .links {
     display: inline;
     color: black !important;
-    text-decoration: none !important;
+    text-decoration: none;
     font-size: 150%;
     text-align: right;
     text-transform: uppercase;
+}
+
+.nav .links:hover {
+    text-decoration: underline;
+}
+
+.nav h1 a{
+    text-decoration: none !important;
+    color: black !important;
 }
 
 @media only screen and (max-width: 768px) {
