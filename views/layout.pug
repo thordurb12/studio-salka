@@ -5,9 +5,10 @@ head
   link(rel="stylesheet", href="/stylesheets/reset.css")
   link(rel="stylesheet", href="/stylesheets/style.css")
   link(rel="stylesheet", href="/stylesheets/vendors/help.min.css")
-  link(href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900", rel="stylesheet", type="text/css")
+  link(href="https://fonts.googleapis.com/css2?family=Alata&display=swap", rel="stylesheet", type="text/css")
+  link(href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css", rel="stylesheet", type="text/css")
   meta(name="viewport", content="width=device-width, initial-scale=1")
-
+  
   // Required for Previews and Experiments
   script(src="https://code.jquery.com/jquery-1.12.4.min.js")
   script
@@ -18,7 +19,9 @@ head
   script(src="https://unpkg.com/flexmasonry/dist/flexmasonry.js")
 
 body
-  .nav
-    h1 Salka Rósinkranz
-    a(href="../bio") bio
-  block body
+  .nav.row.between-xs
+    h1.col-xs-12.col-sm-10 Salka Rósinkranz
+    a(href="../bio").links.col-xs-6.col-sm-1 bio
+    a(href="../").links.col-xs-6.col-sm-1 works
+  .main-content
+    block body
