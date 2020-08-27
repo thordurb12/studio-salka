@@ -65,3 +65,21 @@ img {
 .work:hover h1 {
     display: block;
 }
+
+.bio {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.bio img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .bio {
+        margin-top: 0;
+    }
+    .bio .about{
+        padding-top: 50px;
+    }
+}
