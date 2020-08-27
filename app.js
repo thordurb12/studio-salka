@@ -40,10 +40,21 @@ app.use((req, res, next) => {
  */
 
 app.get('/', (req, res) => {
-  req.prismic.api.query('').then((document) => {
+  req.prismic.api.query(Prismic.Predicates.at('document.type', 'page')).then((document) => {
     // response is the response object, response.results holds the documents
     if (document) {
       res.render('front', { document });
+    } else {
+      res.status(404).render('404');
+    }
+  });
+});
+
+app.get('/bio', (req, res) => {
+  req.prismic.api.query(Prismic.Predicates.at('document.type', 'bio')).then((document) => {
+    // response is the response object, response.results holds the documents
+    if (document) {
+      res.render('bio', { document });
     } else {
       res.status(404).render('404');
     }

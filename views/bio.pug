@@ -1,0 +1,5 @@
+extends ./layout.pug
+
+block body
+    img(src=document.results[0].data.portrait.url)
+    != PrismicDOM.RichText.asHtml(document.results[0].data.about, ctx.linkResolver)
