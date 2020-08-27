@@ -44,6 +44,10 @@ body {
         padding: 20px 5px;
     }
 
+    .nav .links {
+        font-size: 100%;
+    }
+
     .nav .links,
     .nav h1 {
         text-align: center;
