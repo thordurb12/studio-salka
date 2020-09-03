@@ -120,7 +120,7 @@ img {
 .detail-image {
     margin-bottom: 30px;
     width: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
     max-height: 800px;
 }
 
