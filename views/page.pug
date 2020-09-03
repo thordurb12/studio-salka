@@ -1,14 +1,14 @@
 extends ./layout.pug
 
-//- Create a block
 block body
+  img(src=document.data.image.url).detail-image
   .container
-    //- This is how to get an Image into your template
     .row
-      .col-xs-12.col-sm-10.col-sm-offset-1
-        img(src=document.data.image.url)
-
       .col-xs-10.col-sm-6.col-xs-offset-1.col-sm-offset-3
-        //- This is how to get a Rich Text into your template
         != PrismicDOM.RichText.asHtml(document.data.title, ctx.linkResolver)
         != PrismicDOM.RichText.asHtml(document.data.description, ctx.linkResolver)
+
+    .row 
+      each image in document.data.gallery
+        .gallery-image.col-xs-12
+          img(src=image['gallery-image'].url)
