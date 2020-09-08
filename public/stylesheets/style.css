@@ -67,7 +67,7 @@ body {
 
 
 h1 {
-    font-weight: 800;
+    font-weight: 400;
     font-size: 200%;
 }
 
@@ -80,7 +80,6 @@ h1 {
 
 img {
     max-width: 100%;
-    font-weight: 800;
 }
 
 .work {
