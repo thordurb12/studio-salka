@@ -1,11 +1,12 @@
 doctype html(lang='en')
 
 head
-  title SALKA RÓSINKRANZ
+  title ÞÓRÐUR HANS
   link(rel="stylesheet", href="/stylesheets/reset.css")
   link(rel="stylesheet", href="/stylesheets/style.css")
   link(rel="stylesheet", href="/stylesheets/vendors/help.min.css")
-  link(href="https://fonts.googleapis.com/css2?family=Alata&display=swap", rel="stylesheet", type="text/css")
+
+  link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;800&display=swap", rel="stylesheet", type="text/css")
   link(href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css", rel="stylesheet", type="text/css")
   meta(name="viewport", content="width=device-width, initial-scale=1")
   
@@ -15,15 +16,20 @@ head
     = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
   script(src="//static.cdn.prismic.io/prismic.min.js")
   script(src="/javascript/vendors/highlight.min.js")
+  link(href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css", rel="stylesheet", type="text/css") 
+  link(href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css", rel="stylesheet", type="text/css") 
+
+
   link(rel="stylesheet" href="https://unpkg.com/flexmasonry/dist/flexmasonry.css")
   script(src="https://unpkg.com/flexmasonry/dist/flexmasonry.js")
 
 body
-  .container
-    .nav.row.between-xs
-      h1.col-xs-12.col-sm-8
-        a(href="../") SALKA RÓSINKRANZ
-      a(href="../bio").links.col-xs-6.col-sm-2 bio
-      a(href="../").links.col-xs-6.col-sm-2 works
+  .nav-wrap
+    .container
+      .nav.row.between-xs
+        h1.col-xs-12.col-sm-8
+          a(href="../") ÞÓRÐUR HANS
+        a(href="../bio").links.col-xs-6.col-sm-2 bio
+        a(href="../").links.col-xs-6.col-sm-2 works
   .main-content
     block body
