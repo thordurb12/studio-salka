@@ -45,6 +45,10 @@ body {
     font-size: 100%;
 }
 
+strong {
+    font-weight: 600;
+}
+
 @media only screen and (max-width: 768px) {
     .nav h1 a{
         font-size: 150%;
