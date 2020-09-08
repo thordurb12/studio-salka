@@ -3,5 +3,5 @@ extends ./layout.pug
 block body
     .container.bio
         .row.center-xs  
-            .col-xs-10.col-sm-6.about
+            .col-xs-10.col-sm-6.about.cv
                 != PrismicDOM.RichText.asHtml(document.results[0].data.cv, ctx.linkResolver)

@@ -49,6 +49,13 @@ strong {
     font-weight: 600;
 }
 
+br {
+    display: block;
+    width: 100%;
+    height: 10px;
+    content: "";
+}
+
 @media only screen and (max-width: 768px) {
     .nav h1 a{
         font-size: 150%;
@@ -126,6 +133,11 @@ img {
 
 .bio .about{
     text-align: left;
+}
+
+.cv p {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 768px) {
