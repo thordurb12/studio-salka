@@ -61,6 +61,17 @@ app.get('/bio', (req, res) => {
   });
 });
 
+app.get('/cv', (req, res) => {
+  req.prismic.api.query(Prismic.Predicates.at('document.type', 'cv')).then((document) => {
+    // response is the response object, response.results holds the documents
+    if (document) {
+      res.render('cv', { document });
+    } else {
+      res.status(404).render('404');
+    }
+  });
+});
+
 /*
  * Prismic documentation to build your project with prismic
  */
