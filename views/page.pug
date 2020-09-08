@@ -4,11 +4,28 @@ block body
   img(src=document.data.image.url).detail-image
   .container
     .row
-      .col-xs-10.col-sm-6.col-xs-offset-1.col-sm-offset-3
+      .col-xs-10.col-sm-6.col-xs-offset-1.col-sm-offset-3.detail-text
         != PrismicDOM.RichText.asHtml(document.data.title, ctx.linkResolver)
         != PrismicDOM.RichText.asHtml(document.data.description, ctx.linkResolver)
 
-    .row 
+    .row.gallery-images
       each image in document.data.gallery
         .gallery-image.col-xs-12
           img(src=image['gallery-image'].url)
+    
+
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+  script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+
+  script. 
+    $(document).ready(function(){
+      $('.gallery-images').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        prevArrow: "<img class='a-left control-c prev slick-prev' src='../images/prev.png'>",
+        nextArrow: "<img class='a-next control-c next slick-next' src='../images/next.png'>",
+        adaptiveHeight: false
+        });
+    });

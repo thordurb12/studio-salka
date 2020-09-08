@@ -8,7 +8,7 @@ body {
     //-webkit-text-stroke-width: .05px;
     //-webkit-text-stroke-color: white;
     -webkit-font-smoothing: antialiased;
-    font-family: Alata, sans-serif;
+    font-family: Poppins, sans-serif;
     font-size: 18px;
     line-height:35px;
     font-weight: 400;
@@ -42,9 +42,14 @@ body {
 .nav h1 a{
     text-decoration: none !important;
     color: black !important;
+    font-size: 200%;
 }
 
 @media only screen and (max-width: 768px) {
+    .nav h1 a{
+        font-size: 150%;
+    }
+
     .nav {
         padding: 20px 5px;
     }
@@ -60,12 +65,22 @@ body {
     }
 }
 
+
 h1 {
-    font-size: 150%;
+    font-weight: 800;
+    font-size: 200%;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-weight: 400;
+        font-size: 150%;
+    }
 }
 
 img {
     max-width: 100%;
+    font-weight: 800;
 }
 
 .work {
@@ -77,6 +92,8 @@ img {
     position: absolute;
     bottom: 0;
     z-index: 2;
+    font-weight: 400;
+    font-size: 200%;
     color: black !important;
     padding-left: 5px;
     background-color: white;
@@ -118,16 +135,32 @@ img {
 }
 
 .detail-image {
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     width: 100%;
     object-fit: scale-down;
     max-height: 800px;
 }
 
+.gallery-images {
+    margin-top: 100px !important;
+    margin-bottom: 400px !important;
+}
+
 .gallery-image{
-    margin: 30px auto;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .gallery-image img {
-    width: 100%;
+    max-height: 500px;
+    margin: 0 auto;
+}
+
+.slick-slide {
+    height: auto !important;
+    outline: none !important;
+}
+
+.slick-dots {
+    bottom: -50px !important;
 }
