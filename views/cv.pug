@@ -2,8 +2,6 @@ extends ./layout.pug
 
 block body
     .container.bio
-        .row.center-xs
-            .col-xs-12.col-sm-5.col-md-4.pic
-                img(src=document.results[0].data.portrait.url)
+        .row.center-xs  
             .col-xs-10.col-sm-6.col-md-5.col-sm-offset-1.about
-                != PrismicDOM.RichText.asHtml(document.results[0].data.about, ctx.linkResolver)
+                != PrismicDOM.RichText.asHtml(document.results[0].data.cv, ctx.linkResolver)
